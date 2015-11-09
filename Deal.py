@@ -20,7 +20,6 @@ def main():
     random.shuffle(deck)
     # Shuffle again, because once is never enough!
     random.shuffle(deck)
-
     # Pop a card from the top of the deck, deal to each player, increment until player has 13 cards.
     # reorder the populated list, translate the int value to strings and print, respectively.
     print("North was dealt:")
