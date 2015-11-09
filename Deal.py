@@ -22,16 +22,25 @@ def main():
     random.shuffle(deck)
 
     # Pop a cart from the top of the deck, deal to each player, increment until player has 13 cards.
-    print("North was dealt")
-    print("---------------")
+
     i = 0
     while i < CARDS_PER_HAND:
         card = deck.pop()
         North.append(card)
         North.sort()
-        print(North)
         i += 1
-    print()
+        # print(North)
+    for i in range(len(North)):
+        i = [RANKS[deck.pop(1) % CARDS_PER_HAND], 'of', SUITS[deck.pop(1) // CARDS_PER_HAND], ]
+        print(i)
+        #print("\n".join(map(str, North)))
+
+    #
+    #
+    #
+    #
+    #
+    #
     print("East was dealt:")
     print("---------------")
     i = 0
@@ -55,6 +64,7 @@ def main():
         card = deck.pop()
         print(RANKS[card % CARDS_PER_HAND], "of", SUITS[card // CARDS_PER_HAND])
         i += 1
+
 
 ## can be returned from the deal function
 main()
